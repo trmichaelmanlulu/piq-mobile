@@ -1,0 +1,8 @@
+{
+  "name": "piq-mobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "7705b896"
+}
