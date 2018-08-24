@@ -1,14 +1,24 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="primary">
+    <button ion-button icon-only>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title start>{{ pages[selectedTab].title }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="header-search-btn">
+        <ion-icon name="search"></ion-icon>
+      </button>
+      <button ion-button icon-only class="header-notification-btn">
+        <ion-icon name="notifications">
+            <ion-badge class="notification-badge" color="danger">2</ion-badge>
+        </ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <super-tabs tabsPlacement="top" toolbarBackground="primary" toolbarColor="light" indicatorColor="light" (tabSelect)="onTabSelected($event)" scrollTabs="true">
+    <super-tab *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id"></super-tab>
+  </super-tabs>
 </ion-content>

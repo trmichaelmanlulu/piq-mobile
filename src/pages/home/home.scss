@@ -1,3 +1,23 @@
 page-home {
+    ion-header {
+        .toolbar-title {
+            text-align: left;
+        }
+        ion-buttons {
+            margin-right: 2rem;
+            
+            .header-search-btn {
+                margin-right: 1rem;
+            }
+            .header-notification-btn {
+                padding-right: 1rem !important;
 
+                .notification-badge {
+                    position: absolute;
+                    right: 2px;
+                    top: -5px;
+                }
+            }
+        }
+    }
 }
